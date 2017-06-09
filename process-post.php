@@ -10,4 +10,4 @@ fwrite($file, $content);
 fclose($file);   
 echo '<p>Well Play ! File created.</p>';
 ?>
-<a href="create.html">Retour</a>
+<a href="index.php">Retour</a>
