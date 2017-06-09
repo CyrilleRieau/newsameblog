@@ -26,8 +26,12 @@ foreach($array as $file) {
         ?>
     <article>
         <h2><?php echo basename($file, '.txt') ?></h2>
-        <p><?php $content = file_get_contents('posts/'.$file);
-        echo $content; ?></p>
+        <p><?php echo file_get_contents('posts/'.$file);?></p>
+        <form action="delete-post.php" method="POST">
+            <input type="hidden" name="filename" value="<?php echo $file ?>"></input>
+            <input type="submit" value="Delete"></input>
+
+        </form>
     </article>
     <?php 
     }
